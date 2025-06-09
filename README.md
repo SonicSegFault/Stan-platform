@@ -10,3 +10,14 @@ Each part has its own folder with detailed documentation, setup instructions, an
 
 ## Structure
 
+/STAN
+/CMS
+
+
+## Getting Started
+
+To get started, navigate into the respective folders (`STAN` or `CMS`) and follow the setup instructions in their README files.
+
+---
+
+Feel free to contribute or open issues for any bugs or feature requests.
