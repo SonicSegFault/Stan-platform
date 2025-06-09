@@ -1,0 +1,46 @@
+/* Tailwind equivalent classes */
+.card {
+  @apply rounded-2xl bg-gray-200 cursor-pointer overflow-hidden shadow-lg transition-all duration-500 w-[15vh] h-80;;
+}
+
+.card:hover {
+  @apply w-[600px]; /* expands on hover */
+}
+
+/* Keyframe animation for falling stars */
+@keyframes fallingStars {
+  0% {
+    transform: translateY(-100vh) scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) scale(1);
+    opacity: 0;
+  }
+}
+
+.animated-star-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Set to 100% to fill the section */
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.star {
+  position: absolute;
+  top: -10px; /* Start from above the section */
+  width: 2px;
+  height: 20px;
+  background-color: white;
+  opacity: 0.8;
+  animation: fallingStars linear infinite;
+}
+
+/* Randomly delay and duration for variety in stars */
+.star:nth-child(2n) { animation-duration: 3s; animation-delay: 0.5s; }
+.star:nth-child(3n) { animation-duration: 4s; animation-delay: 1s; }
+.star:nth-child(4n) { animation-duration: 5s; animation-delay: 1.5s; }

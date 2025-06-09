@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+  scroll-snap-type: y mandatory;
+  scroll-behavior:smooth;
+}
+
+/* snap scrolling sections */
+section{
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Global Scrollbar Hide */
+::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Edge */
+}
+
+body, html {
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  scrollbar-width: none; /* For Firefox */
+}
+ 
+@keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .animated-background {
+    background: linear-gradient(-45deg, #0d47a1, #42a5f5, rgb(30, 32, 36), black);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+  }
+ 
